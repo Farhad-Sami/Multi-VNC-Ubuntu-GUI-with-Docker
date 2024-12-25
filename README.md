@@ -40,12 +40,17 @@ A powerful Docker solution for running multiple Ubuntu GUI instances with VNC ac
    cd <repository-name>
    ```
 
-2. Build and start the containers:
+2. Create the required data directories:
+   ```bash
+   mkdir -p data/vnc{1..10}
+   ```
+
+3. Build and start the containers:
    ```bash
    docker-compose up -d
    ```
 
-3. Connect to any container using a VNC viewer:
+4. Connect to any container using a VNC viewer:
    - Container 1: `localhost:5901`
    - Container 2: `localhost:5902`
    - ...
